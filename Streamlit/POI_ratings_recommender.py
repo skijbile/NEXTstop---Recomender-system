@@ -110,7 +110,7 @@ def pre_process():
     columns_to_drop_2=["Latitude","Longitude"]
     TM_events.drop(columns=columns_to_drop_2,inplace=True,axis=1)
     desired_columns_2=['Event_name', 'Event_type', 'Event_dates', 'Event_start_times','Last_Purchase_Date','Venues','Age_restrictions','Ticket_limits',
-       'Parking', 'Accesibility'
+       'Parking', 'Accesibility',
        'Event_time_zone',  'City', 'States', 'Address','Additional_info']
     TM_events=TM_events[desired_columns_2]
 
