@@ -12,7 +12,7 @@ from POI_ratings_recommender import main_recommender,process_output,load_users,p
 yelp_POI,TM_events,foursq_POI= pre_process()
 
 #Add sidebar to the app
-st.sidebar.markdown("### What's Next to do ")
+st.sidebar.markdown("### NEXTstop ")
 st.sidebar.markdown("Welcome to planning an itenerary. This app is built using Streamlit and uses data sourced from Ticket Master, Yelp and FourSquare. I hope you enjoy!")
 
 #Add title and subtitle to the main interface of the app
@@ -29,11 +29,13 @@ POI_user,TM_user =load_users()
 # Concatenate user_name columns and get unique user names
 user_names = pd.concat([POI_user, TM_user])['user_name'].dropna().unique()
 city_name=pd.concat([POI_user['City'], TM_user['city']]).dropna().unique()
-sorted_cities = sorted(city_name)
+sorted_cities = city_name
+
 
 # Display dropdown menu in Streamlit
 selected_user = st.selectbox("User Login ", user_names)
-selected_city= st.selectbox("Select your destination in Canada ", sorted_cities)
+selected_city= st.selectbox("Select your destination in Canada ",sorted_cities)
+
 
 # Add a "Proceed" button
 proceed = st.button("Next")
@@ -59,38 +61,50 @@ if proceed:
 # Display recommendations
     st.write("Top Recommendations for : ",selected_user)
     if len(Events)>0:
-        df2=pd.DataFrame(Events)
-        df2.reset_index(drop=True, inplace=True)  # Reset index
+        df1=pd.DataFrame(Events)
+        df1.reset_index(drop=True, inplace=True)  # Reset index
+        # Setting index starting from 1
+        df1.index = df1.index + 1
         st.write("Events in the area :")
-        st.write(df2.head())
+        st.write(df1.head(10))
     else:
         st.write("No Events.")
-        df2=pd.DataFrame(suggested_events)
-        df2.reset_index(drop=True, inplace=True)
+        df1=pd.DataFrame(suggested_events)
+        df1.reset_index(drop=True, inplace=True)
+        # Setting index starting from 1
+        df1.index = df1.index + 1
         st.write("Other options :")
-        st.write(df2.head())
+        st.write(df1.head())
         
     if len(restaurants)>0:
-        df1=pd.DataFrame(restaurants)
-        df1.reset_index(drop=True, inplace=True)  # Reset index
+        df2=pd.DataFrame(restaurants)
+        df2.reset_index(drop=True, inplace=True)  # Reset index
+        # Setting index starting from 1
+        df2.index = df2.index + 1
         st.write("Restaurants to visit : ")
-        st.write(df1.head())
+        st.write(df2.head(10))
     else:
         st.write("No restaurant recommendations available.")
-        df1=pd.DataFrame(suggested_restaurant)
-        df1.reset_index(drop=True, inplace=True)  # Reset index
+        df2=pd.DataFrame(suggested_restaurant)
+        df2.reset_index(drop=True, inplace=True)  # Reset index
+        # Setting index starting from 1
+        df2.index = df2.index + 1
         st.write("Other options : ")
-        st.write(df1.head())
+        st.write(df2.head())
 
     if len(POI)>0 :
         df3=pd.DataFrame(POI)
-        df3.reset_index(drop=True, inplace=True)  # Reset index
+        df3.reset_index(drop=True, inplace=True) # Reset index
+        # Setting index starting from 1
+        df3.index = df3.index + 1
         st.write("Places to visit :")
-        st.write(df3.head())
+        st.write(df3.head(10))
     else:
         if len(suggested_POI)> 0:
             df3=pd.DataFrame(suggested_POI)
             df3.reset_index(drop=True, inplace=True)  # Reset index
+            # Setting index starting from 1
+            df3.index = df3.index + 1
             st.write("People have also visited :")
             st.write(df3.head())
         else:

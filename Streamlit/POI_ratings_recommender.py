@@ -109,15 +109,15 @@ def pre_process():
                 
     columns_to_drop_2=["Latitude","Longitude"]
     TM_events.drop(columns=columns_to_drop_2,inplace=True,axis=1)
-    desired_columns_2=['Event_name', 'Event_type', 'Event_dates', 'Event_start_times','Last_Purchase_Date',
-       'Event_time_zone', 'Venues', 'City', 'States', 'Address','Age_restrictions','Additional_info', 'Ticket_limits',
-       'Parking', 'Accesibility']
+    desired_columns_2=['Event_name', 'Event_type', 'Event_dates', 'Event_start_times','Last_Purchase_Date','Venues','Age_restrictions','Ticket_limits',
+       'Parking', 'Accesibility'
+       'Event_time_zone',  'City', 'States', 'Address','Additional_info']
     TM_events=TM_events[desired_columns_2]
 
     # Reset the index of the DataFrame (if needed)
     #foursq_POI.reset_index(drop=True, inplace=True)
     desired_columns_3=["POI","Category","Address","City","State","Distance From Venue","Venue"]
-    foursq_POI = foursq_POI.iloc[:, foursq_POI.columns.isin(desired_columns_3)]
+    foursq_POI = foursq_POI[ desired_columns_3]
 
     return yelp_POI,TM_events,foursq_POI
 
@@ -146,6 +146,10 @@ def process_output(similar_users_df, suggestions,user_city,yelp_POI,TM_events,fo
     POI=[]
 
     for item in similar_users_df['venue'].unique():
+        for index2,row2 in TM_events.iterrows() :
+            if item in row2['Venues'] and row2['City']==user_city:
+                Events.append(row2)
+                break
         for index,row in yelp_POI.iterrows():
              if isinstance(row['Name'], str) and row['City']==user_city and item in row['Name'] :
                 restaurants.append(row)
@@ -155,11 +159,6 @@ def process_output(similar_users_df, suggestions,user_city,yelp_POI,TM_events,fo
             if isinstance(poi_value, str) and row1['City']==user_city and item in poi_value :
                 POI.append(row1)
                 break  # Stop searching after finding a match
-
-        for index2,row2 in TM_events.iterrows() :
-            if item in row2['Venues'] and row2['City']==user_city:
-                Events.append(row2)
-                break
 
     # optional places
 
