@@ -4,6 +4,8 @@ NEXTstop-	User based recommender application to find places of interest in the c
 
 Data- 
 	Ticket Master API,  Yelp fusion API, FourSquare API 
+ ![API distribution DB](Data/Image/API%20distribution%20DB.png)
+
 
 Purpose-
 	 To deploy a model to return places in a city in Canada with events and business around in a small radius , with ratings (preferable the top buisinesses ). The idea behind is to create an application to assist a user in creating an itenirary  based on the users history of ratings and also suggest some other things of interest based on other users.
