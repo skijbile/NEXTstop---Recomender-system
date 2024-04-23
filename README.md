@@ -13,7 +13,7 @@ Data-
 
 Purpose-
 	 To deploy a model to return places in a city in Canada with events and business around in a small radius , with ratings (preferable the top buisinesses ). The idea behind is to create an application to assist a user in creating an itenirary  based on the users history of ratings and also suggest some other things of interest based on other users.
-  in the following image you can see the area covered within this dataset 
+ <p> In the following image you can see the area covered within this dataset </p>
 
   <div style="display: flex; justify-content: center;">
     <p align="center">
