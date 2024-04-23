@@ -59,9 +59,15 @@ Yelp fusion API using latitude and longitude from TicketMaster data was able to 
 
  <div style="display: flex; justify-content: center;">
     <p align="center">
-	<img src="Data/Image/FourSq3.png" width="400">  
+	<img src="Data/Image/Yelp Data.png" width="500">  
     </p>
 </div>
+
+This application has room for expansion to a global level and development in terms of building data pipelines to enhance maintainance for dealing with larger datasets.
+
+
+
+
 
 
  
