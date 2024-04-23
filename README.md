@@ -39,10 +39,18 @@ Main aim -
  
 
 <p>This application in its initial stages covers only a few categories with a relatively small group. </p>
-TicketMaster API consistes of events accross the couuntry mainly focusing on sports and music, however those categories are further subdivided 
+TicketMaster API consistes of events accross the couuntry mainly focusing on sports and music, however those categories are further subdivided. Age restriction information was acquired from additional information column using NLTK library which can be found in the 'EDA TicketMaster.ipynb'
   <div style="display: flex; justify-content: center;">
     <p align="center">
-        <img src="Data/Image/Country Included.png" width="500">
+        <img src="Data/Image/Ticket Master Data.png" width="500">
+    </p>
+</div>
+
+FourSquare APi was used to find places of interest based on venues found from TicketMaster API as reference. At this moment the concentration of category was only for museums. We ca also see how those are distributed accross various provinces
+
+ <div style="display: flex; justify-content: center;">
+    <p align="center">
+        <img src="Data/Image/Ticket Master Data.png" width="500">
     </p>
 </div>
 
