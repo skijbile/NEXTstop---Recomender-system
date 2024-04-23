@@ -22,7 +22,7 @@ Data-
 
   <div style="display: flex; justify-content: center;">
     <p align="center">
-        <img src="Data/Image/Country Included.png" width="500">
+        <img src="Data/Image/Provincial Details.png" width="300">
     </p>
 </div>
 
