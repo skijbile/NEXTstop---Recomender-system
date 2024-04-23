@@ -50,7 +50,8 @@ FourSquare APi was used to find places of interest based on venues found from Ti
 
  <div style="display: flex; justify-content: center;">
     <p align="center">
-        <img src="Data/Image/Ticket Master Data.png" width="500">
+	<img src="Data/Image/FourSq 2.png" width="300">  
+        <img src="Data/Image/FourSq 2.png" width="300">
     </p>
 </div>
 
