@@ -29,7 +29,7 @@ Main aim -
 	Work with deployement of an application using streamlit.io
  
  Tech Stack used - 
- 	<p>Pandas: Used for data manipulation and analysis.</p>
+ 	<t><p>Pandas: Used for data manipulation and analysis.</p></t>
  	<p>NumPy: Utilized for numerical computing and array operations.</p>
  	<p>Matplotlib: Employed for data visualization and plotting.</p>
 	<p>NLTK (Natural Language Toolkit): Used for natural language processing tasks such as text analysis and tokenization.</p>
