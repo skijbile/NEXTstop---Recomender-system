@@ -27,5 +27,18 @@ Main aim -
 	To be able to retrieve data from API's and parse json files. Distinguish between relevant important data from all the information available. 
 	Build a recommender system 
 	Work with deployement of an application using streamlit.io
+ 
+ Tech Stack used - 
+ 	<p>Pandas: Used for data manipulation and analysis.</p>
+ 	<p>NumPy: Utilized for numerical computing and array operations.</p>
+ 	<p>Matplotlib: Employed for data visualization and plotting.</p>
+	<p>NLTK (Natural Language Toolkit): Used for natural language processing tasks such as text analysis and tokenization.</p>
+	<p>Streamlit: Utilized for building interactive web applications for data visualization and user interaction</p>
+
+ 
+
+<p>This application in its initial stages covers only a few categories with a relatively small group. </p>
+TicketMaster API consistes of events accross the couuntry mainly focusing on sports and music, however those categories are further subdivided the 
+ 
 
  
