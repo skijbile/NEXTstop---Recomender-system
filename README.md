@@ -11,9 +11,14 @@ Data-
     </p>
 </div>
 
-Purpose-
-	 To deploy a model to return places in a city in Canada with events and business around in a small radius , with ratings (preferable the top buisinesses ). The idea behind is to create an application to assist a user in creating an itenirary  based on the users history of ratings and also suggest some other things of interest based on other users.
- <p> In the following image you can see the area covered within this dataset </p>
+<p> In the following image you can see the area covered within this dataset </p>
+
+  <div style="display: flex; justify-content: center;">
+    <p align="center">
+        <img src="Data/Image/Country Included.png" width="500">
+    </p>
+</div>
+<p>We can also take a look at the distribution of business across provinces that are included in this data set </p>
 
   <div style="display: flex; justify-content: center;">
     <p align="center">
@@ -21,8 +26,9 @@ Purpose-
     </p>
 </div>
 
-  
-
+Purpose-
+	 To deploy a model to return places in a city in Canada with events and business around in a small radius , with ratings (preferable the top buisinesses ). The idea behind is to create an application to assist a user in creating an itenirary  based on the users history of ratings and also suggest some other things of interest based on other users.
+ 
 Main aim - 
 	To be able to retrieve data from API's and parse json files. Distinguish between relevant important data from all the information available. 
 	Build a recommender system 
