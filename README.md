@@ -55,4 +55,13 @@ FourSquare APi was used to find places of interest based on venues found from Ti
     </p>
 </div>
 
+Yelp fusion API using latitude and longitude from TicketMaster data was able to retrive restaurants in the area. Using business information I was also able to get user and reviews information for each and every venue gathered from all 3 API's. 
+
+ <div style="display: flex; justify-content: center;">
+    <p align="center">
+	<img src="Data/Image/FourSq3.png" width="400">  
+    </p>
+</div>
+
+
  
