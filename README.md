@@ -17,7 +17,7 @@ Purpose-
 
   <div style="display: flex; justify-content: center;">
     <p align="center">
-        <img src="Data/Image/API%20distribution%20DB.png" width="400">
+        <img src="Data/Image/Country Included.png" width="300">
     </p>
 </div>
 
