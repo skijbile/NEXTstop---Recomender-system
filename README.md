@@ -5,7 +5,7 @@ NEXTstop-	User based recommender application to find places of interest in the c
 Data- 
 	Ticket Master API,  Yelp fusion API, FourSquare API 
 <div style="text-align:center;">
-    <img src="Data/Image/API%20distribution%20DB.png" width="400">
+    <img src="Data/Image/API%20distribution%20DB.png" width="300">
 </div>
 
 
