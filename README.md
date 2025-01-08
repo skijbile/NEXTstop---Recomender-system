@@ -1,5 +1,3 @@
-Final Project - 
-
 NEXTstop-	User based recommender application to find places of interest in the country of Canada
 
 Data- 
